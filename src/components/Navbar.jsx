@@ -27,7 +27,7 @@ const Navbar = ({ setIsAuthenticated }) => {
     localStorage.getItem("cartItems") || "[]",
   ).reduce((t, i) => t + i.quantity, 0);
   const handleLogout = () => {
-    ["authToken", "userName", "userEmail"].forEach((i) =>
+    ["authToken", "userName", "userEmail", "userRole"].forEach((i) =>
       localStorage.removeItem(i),
     );
     setIsAuthenticated(false);
