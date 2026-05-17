@@ -4,8 +4,7 @@ const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
   const isLoggedIn =
-    typeof window !== "undefined" &&
-    localStorage.getItem("authToken") !== null;
+    typeof window !== "undefined" && localStorage.getItem("authToken") !== null;
 
   const login = () => {
     if (typeof window !== "undefined") {
